@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.client.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.client.ui.gallery.GalleryFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/nav_wallet"
+        android:name="com.example.client.ui.slideshow.WalletFragment"
+        android:label="Wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:label="Help"
+        tools:layout="@layout/activity_settings"
+        android:name="com.example.client.ui.Settings.SettingsFragment"/>
+    <fragment
+        android:id="@+id/nav_logout"
+        android:label="Logout"
+        tools:layout="@layout/logout"
+        android:name="com.example.client.ui.Logout"/>
+    <fragment
+        android:id="@+id/nav_refer"
+        android:label="Refer"
+        tools:layout="@layout/fragment_refer"
+        android:name="com.example.client.ui.Refer"/>
+</navigation>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:id="@+id/container"
+    tools:context=".PinVerification">
+
+        <TextView
+            android:id="@+id/purpose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:maxWidth="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="To add an amount of 10/- in wallet from winnings"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/purpose">
+
+                <TableRow>
+
+                        <TextView
+                            android:id="@+id/messageDisplay"
+                            android:layout_width="300dp"
+                            android:layout_height="30dp"
+                            android:text="Enter your pin"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                </TableRow>
+
+
+                <TableRow>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/pin"
+                            style="@style/MyDenseOutlined"
+                            app:hintEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:cursorVisible="false"
+                                    android:importantForAutofill="no"
+                                    android:inputType="numberPassword"
+                                    android:maxLength="4"
+
+                                    android:textAlignment="center"
+                                    android:textIsSelectable="false" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                </TableRow>
+
+                <TableRow>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/animate"
+                            style="@style/MyDenseOutlined"
+                            android:focusable="false"
+
+                            android:visibility="gone"
+                            app:hintEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:focusable="false"
+                                    android:keyboardNavigationCluster="true"
+                                    android:maxLength="4"
+                                    android:text="⬤⬤⬤⬤"
+                                    android:textAlignment="center"
+                                    android:textIsSelectable="false" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/table_background2"
+            android:elevation="5dp"
+            android:id="@+id/customKeypad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+                <TableRow>
+
+                        <Button android:text="1"
+                            android:layout_weight="1"
+                            android:id="@+id/one"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="2"
+                            android:id="@+id/two"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="3"
+                            android:id="@+id/three"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                </TableRow>
+                <TableRow>
+
+                        <Button android:text="4"
+                            android:id="@+id/four"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="5"
+                            android:id="@+id/five"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="6"
+                            android:id="@+id/six"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                </TableRow>
+                <TableRow>
+
+                        <Button android:text="7"
+                            android:layout_weight="1"
+                            android:id="@+id/seven"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="8"
+                            android:id="@+id/eight"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="9"
+                            android:id="@+id/nine"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            style="@style/keyboardButtons"/>
+                </TableRow>
+                <TableRow>
+
+                        <ImageButton android:src="@drawable/ic_baseline_backspace_24"
+                            android:layout_weight="1"
+                            android:id="@+id/delete"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            style="@style/keyboardButtons"/>
+                        <Button android:text="0"
+                            android:id="@+id/zero"
+                            android:layout_weight="1"
+                            android:textSize="24sp"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            style="@style/keyboardButtons"/>
+                        <ImageButton android:src="@drawable/ic_baseline_check_24"
+                            android:layout_weight="1"
+                            android:id="@+id/ok"
+                            style="@style/keyboardButtons"
+                            android:foreground="?attr/selectableItemBackground" />
+                </TableRow>
+        </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_layout"
+    tools:context=".ui.slideshow.Transfer_to_friend">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Transfer to A Friend"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PUBG_ID"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:endIconCheckable="true"
+        app:endIconDrawable="@drawable/ic_baseline_search_24"
+        app:endIconMode="custom"
+        app:endIconTint="@color/colorPrimary"
+        app:hintTextColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="PUBG ID"
+            android:inputType="number" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TableLayout
+        android:id="@+id/searchResult"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/table_background"
+        android:elevation="5dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/PUBG_ID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:id="@+id/Username_header"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="PUBG USERNAME:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/searchResult_username"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="arif2035"
+                android:layout_marginLeft="10dp"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+        </TableRow>
+<TextView android:layout_width="match_parent"
+    android:id="@+id/no_data_display"
+    android:text="No such user exists"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textAlignment="center"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:textColor="@color/colorPrimary"/>
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:id="@+id/email_header"
+                android:layout_width="wrap_content"
+              android:layout_weight="1"
+                android:text="email:"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/searchResult_email"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="mohammedarif0706@gmail.com"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+        </TableRow>
+        <ProgressBar android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:id="@+id/searchProgress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"/>
+
+    </TableLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:hintTextColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/transfer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="amount"
+            android:inputType="number" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Transfer"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="499dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

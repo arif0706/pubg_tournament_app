@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+    </style>
+    <style name="AppTheme.CenterAnimation" >
+        <item name="android:windowBackground">@drawable/start</item>
+    </style>
+    <style name="ColorTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        ...
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="editTextAppearance" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+
+    <style name="AppTheme.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="SplashScreen" parent="Theme.MaterialComponents" >
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowFullscreen">true</item>
+              <item name="backgroundColor">@android:color/white</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="actionMenuTextColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="android:layout_height">200dp</item>
+    </style>
+<style name="editTextAppearance.">
+    <item name="android:solidColor">#FFFFFF</item>
+    <item name="strokeColor">#E7E7E7</item>
+    <item name="strokeWidth">2dp</item>
+    <item name="android:height">10dp</item>
+    <item name="cornerRadius">5dp</item>
+</style>
+    <style name="MyDenseOutlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense</item>
+
+    </style>
+
+    <style name="MyThemeOverlayOutlinedDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_outlinedBox_dense_h
+        </item>
+    </style>
+
+    <style name="MyTextInputEditText_outlinedBox_dense_h" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+    <style name="keyboardButtons" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="shapeAppearance">?attr/shapeAppearanceSmallComponent</item>
+    </style>
+    <style name="imageButtonKeyboard" parent="@style/Widget.AppCompat.ImageButton">
+        <item name="rippleColor">@color/colorAccent</item>
+    </style>
+</resources>

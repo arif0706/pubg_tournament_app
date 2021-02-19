@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.slideshow.transactions">
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/load"
+    android:layout_gravity="center_vertical|center"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactions_list"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="true"
+        android:scrollbarSize="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No transactions done"
+        android:textColor="@android:color/holo_red_light"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:id="@+id/no_transaction_display"
+        android:visibility="invisible"/>
+
+
+</FrameLayout>

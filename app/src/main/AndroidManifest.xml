@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.client">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_icon_for_app_round"
+        android:label="SR Gamerz"
+        android:roundIcon="@mipmap/ic_launcher_icon_for_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".pinChange"></activity>
+        <activity android:name=".PasswordChange" />
+        <activity android:name=".PasswordRegistration" />
+        <activity android:name=".pinRegistration"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".PinVerification"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Notification_display"
+            android:label="Notifications"
+            android:parentActivityName=".Logged1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Blocked"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ListOfPlayers"
+            android:label="@string/title_activity_list_of_players"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StartScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CenterAnimation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Logged1"
+            android:label="@string/title_activity_logged1"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Register" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name=".Notification.FirebaseMessage"
+            android:directBootAware="true"
+            android:exported="false"
+            android:roundIcon="@drawable/icon6"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".Notification.Receiver" />
+        <receiver android:name=".ModelClasses.internet_receiver" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/navigation_icon" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.client.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/add_money"
+    android:enabled="true"
+    android:icon="@drawable/ic_add_black_24dp"
+    android:title="Add Money"/>
+<item
+    android:id="@+id/redeem_money"
+    android:enabled="true"
+    android:icon="@drawable/ic_redeem_black_24dp"
+    android:title="Withdraw"/>
+    <item android:id="@+id/transfer_to_friend"
+        android:enabled="true"
+        android:title="Transfer to friend"
+        android:icon="@drawable/ic_transfer" />
+
+    <item android:id="@+id/transactions"
+        android:enabled="true"
+        android:icon="@drawable/ic_featured_play_list_black_24dp"
+        android:title="Transactions"/>
+</menu>
